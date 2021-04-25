@@ -29,5 +29,43 @@ public class Main {
         // zastępowanie znaku, jeśli jest przed innym znakiem:
         System.out.println(alphanumeric.replaceAll("[ae][Kt]", "---"));
         // tu zastąpimy każdą literę a lub e, ale tylko jeśli za nią jest K lub t
+
+        // zastępowanie Lower/UpperCase jednym wariantem:
+        // (niezależnie, czy wyraz jest napisany małą czy wielką literą - będzie zmieniony w 1 standard)
+        System.out.println("harry".replaceAll("[hH]arry", "Harry"));
+
+        // zastępowanie każdej litery oprócz wymienionej:
+        System.out.println(alphanumeric.replaceAll("[^ey]", "_"));
+
+        // zastępowanie znaków z pewnego zakresu:
+        System.out.println(alphanumeric.replaceAll("[a-f3-8]", "+"));
+
+        // zastąpienie liter - z ignorowaniem wielkości (np. a-A):
+        System.out.println(alphanumeric.replaceAll("(?i)[a-f3-8]", "="));
+        // (?i) działa ze stringami w formacie ASCII
+        // dla Unicode i ASCII stosujemy polecenie (?iu)
+
+        // zastąpienie wszystkich cyfr w stringu:
+        System.out.println(alphanumeric.replaceAll("[0-9]", "#"));
+        // lub:
+        System.out.println(alphanumeric.replaceAll("\\d", "#"));
+
+        // zastąpienie wszystkich znaków niebędących cyframi:
+        System.out.println(alphanumeric.replaceAll("\\D", "@"));
+
+        String hasWhiteSpace = "I have blanks and\ta tab, and also a new line\n.";
+        System.out.println(hasWhiteSpace);
+
+        // usuwanie białych znaków:
+        System.out.println(hasWhiteSpace.replaceAll("\\s", ""));
+        // usuwanie tabulatorów: \\t
+        // usuwanie podziału linii: \\n
+        // usuwanie wszystkich znaków poza białymi znakami: \\S
+
+        // usuwanie wszystkich małych liter, wielkich liter, cyfr oraz dolnego podkreślenia:
+        System.out.println(hasWhiteSpace.replaceAll("\\w", "!"));
+
+        // dodawanie znaków wokół np. słów rozdzielonych białymi znakami:
+        System.out.println(hasWhiteSpace.replaceAll("\\b", "\""));
     }
 }
