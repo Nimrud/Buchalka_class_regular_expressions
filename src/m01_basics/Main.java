@@ -58,9 +58,13 @@ public class Main {
 
         // usuwanie białych znaków:
         System.out.println(hasWhiteSpace.replaceAll("\\s", ""));
-        // usuwanie tabulatorów: \\t
-        // usuwanie podziału linii: \\n
-        // usuwanie wszystkich znaków poza białymi znakami: \\S
+
+        // tabulator: \\t
+        // cyfra: \\d
+        // nie-cyfra: \\D
+        // podział linii: \\n
+        // wszystkie znaki poza białymi znakami: \\S
+        // dowolna mała/wielka litera, cyfra lub dolne podkreślenie: \\w
 
         // usuwanie wszystkich małych liter, wielkich liter, cyfr oraz dolnego podkreślenia:
         System.out.println(hasWhiteSpace.replaceAll("\\w", "!"));
