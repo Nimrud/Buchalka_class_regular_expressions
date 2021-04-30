@@ -30,6 +30,9 @@ public class Main {
         // zamiana znaków a-z, oprócz j oraz k
         System.out.println(aN.replaceAll("[a-z&&[^jk]]", "-"));
 
+        // 0 lub 1 wystąpień: ?
+        // np. [a-d]?
+
         // PEŁNA DOKUMENTACJA:
         // https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html
     }
